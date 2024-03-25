@@ -78,7 +78,7 @@
 &trans  &trans  &trans  &trans   &trans   &trans     &trans  &trans     &trans    &trans     &trans    &trans
                         &trans   &trans   &trans     &trans  &trans     &trans
             >;
-            label = "Fn 2"
+            label = "Fn 2";
         };
     };
 };
