@@ -27,7 +27,7 @@
             label = "Base";
             bindings = <
 &kp TAB               &kp Q  &kp W  &kp E     &kp R  &kp T              &kp Y      &kp U  &kp I              &kp O    &kp P     &kp BSPC
-&kp LCTRL             &kp A  &kp S  &kp D     &kp F  &kp G              &kp H      &kp J  &kp K              &kp L    &kp SEMI  &kp SQT
+&mt LCTRL ESC         &kp A  &kp S  &kp D     &kp F  &kp G              &kp H      &kp J  &kp K              &kp L    &kp SEMI  &kp SQT
 &mt LEFT_SHIFT GRAVE  &kp Z  &kp X  &kp C     &kp V  &kp B              &kp N      &kp M  &kp COMMA          &kp DOT  &kp FSLH  &mt RIGHT_SHIFT RETURN
                                     &kp LGUI  &mo 2  &lt 3 ENTER        &kp SPACE  &mo 1  &mt RIGHT_ALT ESC
             >;
@@ -42,41 +42,41 @@
 
             label = "Lower";
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT  &kp POUND  &kp DLLR  &kp PRCNT          &kp CARET  &kp AMPS       &kp STAR     &kp LPAR   &kp RPAR  &kp DEL
-&kp ESC    &trans    &trans  &trans     &trans    &trans             &trans     &kp UNDER      &kp PLUS     &kp LBRC   &kp RBRC  &kp PIPE
-&trans     &trans    &trans  &trans     &trans    &trans             &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans    &trans
-                            &kp LGUI    &mo 4    &kp ENTER          &kp SPACE   &trans         &mt RIGHT_ALT ESC
+&kp TILDE        &kp EXCL  &kp AT  &kp POUND  &kp DLLR  &kp PRCNT          &kp CARET  &kp AMPS       &kp STAR     &kp LPAR   &kp RPAR  &kp BKSP
+&mt LCTRL ESC    &trans    &trans  &trans     &trans    &trans             &trans     &kp UNDER      &kp PLUS     &kp LBRC   &kp RBRC  &kp PIPE
+&trans           &trans    &trans  &trans     &trans    &trans             &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans    &trans
+                                   &kp LGUI   &mo 4     &kp ENTER          &kp SPACE  &trans         &mt RIGHT_ALT ESC
             >;
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | CTRL | A   | S   | D   | F   | G   |   |  H  | -/_ | =/+ |  [  |  ]  |  \   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |BKSP-W|
+            // | CTRL | C-A | S   |  D  |  F  |  G  |   |  H  | -/_ | =/+ |  [  |  ]  |  \   |
+            // | SHFT | C-Z | C-X | C-C | C-V |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
+            //                    | GUI |     | SPC |   | ENT | FN2 | ALT |
 
             label = "Raise";
             bindings = <
-&kp GRAVE   &kp N1    &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7      &kp N8        &kp N9    &kp N0    &kp DEL
-&trans      &trans    &trans     &trans     &trans     &trans       &trans     &kp MINUS   &kp EQUAL     &kp LBKT  &kp RBKT  &kp BSLH
+&kp GRAVE   &kp N1    &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7      &kp N8        &kp N9    &kp N0    &kp LA(BKSP)
+&trans      &kp LG(A) &trans     &trans     &trans     &trans       &trans     &kp MINUS   &kp EQUAL     &kp LBKT  &kp RBKT  &kp BSLH
 &trans      &kp LG(Z) &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans       &trans     &trans      &trans        &trans    &trans    &caps_word
-                                 &kp LGUI   &trans     &kp ENTER    &kp SPACE  &mo 4          &mt RIGHT_ALT ESC
+                                 &kp LGUI   &trans     &kp ENTER    &kp SPACE  &mo 4       &mt RIGHT_ALT ESC
             >;
         };
 
         function_layer {
             // -----------------------------------------------------------------------------------------
-            // |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  ^  |  &  |  *  |  (  |  )  |  DEL |
             // |  F7  |  F8 |  F9 | F10 | F11 | F12 |   | LFT | DWN | UP  | RT  | ALT |  ESC |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &kp CARET  &kp AMPS    &kp STAR    &kp LPAR     &kp RPAR    &kp BKSP
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp RIGHT_ALT  &kp ESC
-&trans  &trans  &trans  &trans   &trans   &trans     &trans  &trans     &trans    &trans     &trans    &trans
-                        &trans   &trans   &trans     &trans  &trans     &trans
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6         &kp CARET  &kp AMPS    &kp STAR  &kp LPAR   &kp RPAR       &kp DEL
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12        &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp RIGHT_ALT  &kp ESC
+&trans  &trans  &trans  &trans   &trans   &trans         &trans     &trans      &trans    &trans     &trans         &trans
+                        &trans   &trans   &trans         &trans     &trans      &trans
             >;
 
             label = "Function";
@@ -85,15 +85,15 @@
         other_layer {
             // -----------------------------------------------------------------------------------------
             // |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
-            // | BTSEL| BT1 | BT2 | BT3 | BT4 | BT5 |   | LEFT| DWN |  UP |  RT | LALT| ESC  |
+            // | BTSEL| BT1 | BT2 | BT3 | BT4 | BT5 |   | L-W | D-W | U-W | R-W | LALT| ESC  |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6              &trans    &trans    &trans  &trans     &trans    &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LALT  &kp ESC
-&trans      &trans        &trans        &trans        &trans        &trans              &trans    &trans    &trans  &trans     &trans    &trans
-                                        &trans        &trans        &trans              &trans    &trans    &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6              &trans        &trans        &trans     &trans        &trans    &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP) &kp LA(RIGHT) &kp LALT  &kp ESC
+&trans      &trans        &trans        &trans        &trans        &trans              &trans        &trans        &trans     &trans        &trans    &trans
+                                        &trans        &trans        &trans              &trans        &trans        &trans
             >;
             label = "Fn 2";
         };
