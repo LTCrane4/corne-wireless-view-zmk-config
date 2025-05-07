@@ -24,7 +24,7 @@
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
             //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
-            label = "Base";
+            label = "MacOS";
             bindings = <
 &kp TAB               &kp Q  &kp W  &kp E     &kp R  &kp T              &kp Y      &kp U  &kp I              &kp O    &kp P     &kp BSPC
 &mt LCTRL ESC         &kp A  &kp S  &kp D     &kp F  &kp G              &kp H      &kp J  &kp K              &kp L    &kp SEMI  &kp SQT
@@ -45,7 +45,7 @@
 &kp TILDE        &kp EXCL  &kp AT  &kp POUND  &kp DLLR  &kp PRCNT          &kp CARET  &kp AMPS       &kp STAR     &kp LPAR   &kp RPAR  &kp BKSP
 &mt LCTRL ESC    &trans    &trans  &trans     &trans    &trans             &trans     &kp UNDER      &kp PLUS     &kp LBRC   &kp RBRC  &kp PIPE
 &trans           &trans    &trans  &trans     &trans    &trans             &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans    &trans
-                                   &kp LGUI   &mo 4     &kp ENTER          &kp SPACE  &trans         &mt RIGHT_ALT ESC
+                                   &trans     &mo 4     &kp ENTER          &kp SPACE  &trans         &trans
             >;
         };
 
@@ -91,12 +91,28 @@
 
             bindings = <
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6              &trans        &trans        &trans     &trans        &trans    &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP) &kp LA(RIGHT) &kp LALT  &kp ESC
-&trans      &trans        &trans        &trans        &trans        &trans              &trans        &trans        &trans     &trans        &trans    &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP) &kp LA(RIGHT) &kp LALT  &tog 5
+&trans      &out OUT_TOG  &trans        &trans        &trans        &trans              &trans        &trans        &trans     &trans        &trans    &trans
                                         &trans        &trans        &trans              &trans        &trans        &trans
             >;
             label = "Fn 2";
         };
     };
+
+        win_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | LWIN |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
+            //                    | CTRL| LWR | ENT |   | SPC | RSE  | ALT |
+
+            label = "Windows";
+            bindings = <
+&kp TAB               &kp Q  &kp W  &kp E     &kp R  &kp T              &kp Y      &kp U  &kp I              &kp O    &kp P     &kp BSPC
+&mt LGUI ESC          &kp A  &kp S  &kp D     &kp F  &kp G              &kp H      &kp J  &kp K              &kp L    &kp SEMI  &kp SQT
+&mt LEFT_SHIFT GRAVE  &kp Z  &kp X  &kp C     &kp V  &kp B              &kp N      &kp M  &kp COMMA          &kp DOT  &kp FSLH  &mt RIGHT_SHIFT RETURN
+                                    &kp LCTRL &mo 2  &lt 3 ENTER        &kp SPACE  &mo 1  &mt RIGHT_ALT ESC
+            >;
+        };
 };
 
